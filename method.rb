@@ -1,8 +1,13 @@
-# total = 10
 
-hash = {"one" => 1, "two" => 2}
-new_hash = {}
-hash.each do |k, v|
-  hash[k] = (v.to_f / 2).to_f.round(2)
+def nb_year(base, population_increase, new_habitants, end_year)
+  population_increase = population_increase / 100
+  index = 0
+  loop do
+    index += 1
+    base += (base * (population_increase)) + new_habitants
+    break if base >= end_year
+    end
+  p index
 end
-p hash
+
+nb_year(1500, 5, 100, 5000)
