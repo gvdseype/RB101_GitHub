@@ -1,3 +1,3 @@
-hash = {"invalid" => :invalid}
+arr =  [1, 2, 3, 4, 5, 6]
 
-p hash["invalid"]
+p arr.sum
